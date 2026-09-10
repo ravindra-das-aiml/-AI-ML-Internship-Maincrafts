@@ -57,6 +57,34 @@ the best-performing one using measurable metrics.
 
 ---
 
+## 📁 Task 3 — Model Validation, Overfitting Control & Hyperparameter Tuning
+
+**Goal:** Go deeper into professional ML practice — detect and control overfitting, validate models
+reliably using cross-validation, and tune hyperparameters systematically with GridSearchCV.
+
+**What was done:**
+- Trained an unconstrained Decision Tree to demonstrate overfitting (train RMSE ≈ $0, test RMSE ≈ $69,790).
+- Applied 5-fold cross-validation for a reliable, split-independent performance estimate.
+- Used `GridSearchCV` to tune `max_depth` and `min_samples_split`, finding the best combination.
+- Compared the tuned model against the Task-2 baselines (Linear Regression, Ridge Regression) and the untuned tree.
+- Justified the final model choice using RMSE, R², overfitting gap, and cross-validation reliability.
+
+**Model Comparison:**
+
+| Model | Train RMSE | Test RMSE | Test R² | Overfit Gap |
+|---|---|---|---|---|
+| Linear Regression | 68,435 | 70,061 | 0.6254 | 1,627 |
+| Ridge Regression | 68,434 | 70,057 | 0.6255 | 1,623 |
+| Decision Tree (untuned) | ~0 | 69,790 | 0.629 | 69,790 |
+| **Decision Tree (tuned)** ✅ (best) | 49,498 | 60,997 | 0.7161 | 11,499 |
+
+**Files:**
+- [`AI_ML_Task3_Model_Validation_Tuning.ipynb`](./task3/AI_ML_Task3_Model_Validation_Tuning.ipynb) — full notebook
+- [`Task3_ML_Report.pdf`](./task3/Task3_ML_Report.pdf) — 2-3 page report
+- [`best_tuned_model.joblib`](./task3/best_tuned_model.joblib), [`scaler.joblib`](./task3/scaler.joblib) — saved tuned model + scaler
+
+---
+
 ## 🛠️ Tools & Technologies
 
 Python · pandas · NumPy · scikit-learn · matplotlib · seaborn · Jupyter Notebook
