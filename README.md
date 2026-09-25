@@ -85,6 +85,35 @@ reliably using cross-validation, and tune hyperparameters systematically with Gr
 
 ---
 
+## 📁 Task 4 — Classification Models, Evaluation Metrics & Handling Imbalanced Data
+
+**Goal:** Move from regression to classification — build a binary classification system and evaluate
+it properly with metrics beyond accuracy, handle class imbalance, and compare classifiers.
+
+**What was done:**
+- Built a binary classifier on the Breast Cancer Wisconsin dataset (Malignant vs Benign).
+- Evaluated with confusion matrix, precision, recall, F1-score, and ROC-AUC.
+- Explained why accuracy alone is misleading on imbalanced data.
+- Tested class weighting (`class_weight="balanced"`) as an imbalance-handling technique.
+- Compared Logistic Regression vs Decision Tree Classifier and justified the final model choice.
+
+**Model Comparison:**
+
+| Model | Accuracy | Precision | Recall | F1-Score |
+|---|---|---|---|---|
+| **Logistic Regression (baseline)** ✅ (best) | 0.9825 | 0.9861 | 0.9861 | 0.9861 |
+| Logistic Regression (balanced) | 0.9561 | 0.9855 | 0.9444 | 0.9645 |
+| Decision Tree | 0.9123 | 0.9559 | 0.9028 | 0.9286 |
+
+ROC-AUC (baseline Logistic Regression): **0.995**
+
+**Files:**
+- [`AI_ML_Task4_Classification_Evaluation.ipynb`](./task4/AI_ML_Task4_Classification_Evaluation.ipynb) — full notebook
+- [`Task4_ML_Report.pdf`](./task4/Task4_ML_Report.pdf) — 2-page report
+- [`logistic_model.joblib`](./task4/logistic_model.joblib), [`logistic_balanced_model.joblib`](./task4/logistic_balanced_model.joblib), [`scaler.joblib`](./task4/scaler.joblib) — saved models
+
+---
+
 ## 🛠️ Tools & Technologies
 
 Python · pandas · NumPy · scikit-learn · matplotlib · seaborn · Jupyter Notebook
