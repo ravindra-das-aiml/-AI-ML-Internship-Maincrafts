@@ -4,8 +4,7 @@
 **Domain:** Artificial Intelligence & Machine Learning
 **Company:** Maincrafts Technology
 
-This repository contains my completed tasks for the AI/ML Internship program, focused on building
-and evaluating machine learning models on the **California Housing dataset**.
+This repository contains my completed tasks for the AI/ML Internship program, covering regression on the **California Housing dataset** (Tasks 1-3) and classification / deep learning on the **Breast Cancer dataset** (Tasks 4-6).
 
 ---
 
@@ -143,11 +142,39 @@ Key insight: on this small, nearly linearly separable dataset, the simple baseli
 
 ---
 
+## 📁 Task 6 — Deep Learning Fundamentals & Neural Network Implementation
+
+**Goal:** Move into deep learning — understand Artificial Neural Networks (forward propagation, backpropagation), build and train a neural network with Keras, and compare it with the traditional ML models from earlier tasks.
+
+**What was done:**
+- Built a multi-layer dense neural network (Keras `Sequential`) on the Breast Cancer dataset: **30 → 16 (ReLU) → 8 (ReLU) → 1 (Sigmoid)**.
+- Compiled with the Adam optimizer and binary cross-entropy loss; trained for 50 epochs (batch size 16, 20% validation split).
+- Evaluated on the held-out test set and plotted training vs validation accuracy and loss curves.
+- Compared the neural network against Logistic Regression (Task 4) and Random Forest (Task 5) on the same train/test split.
+- Note: TensorFlow was blocked by Windows Application Control on my laptop, so Keras 3 was run with the **PyTorch backend**. The Keras code is identical.
+
+**Model Comparison:**
+
+| Model | Accuracy |
+|---|---|
+| Logistic Regression | XX |
+| Random Forest | XX |
+| Neural Network (ANN) | XX |
+
+Key insight: *(write 1 line from your results, e.g. on a small tabular dataset the neural network performs about the same as classical models, so deep learning gives no big advantage here.)*
+
+**Files:**
+- [`Task6.ipynb`](./task6/Task6.ipynb) — full notebook with training output
+- [`accuracy_graph.png`](./task6/accuracy_graph.png), [`loss_graph.png`](./task6/loss_graph.png) — training vs validation curves
+- [`comparison.png`](./task6/comparison.png) — model comparison chart
+
+---
+
 ## 🛠️ Tools & Technologies
 
-Python · pandas · NumPy · scikit-learn · matplotlib · seaborn · Jupyter Notebook
+Python · pandas · NumPy · scikit-learn · Keras (PyTorch backend) · matplotlib · seaborn · Jupyter Notebook
 
-## 📊 Dataset
+## 📊 Datasets
 
-[California Housing Dataset](https://scikit-learn.org/stable/datasets/real_world.html#california-housing-dataset)
-— predicting median house value from features like median income, house age, rooms, population, and location.
+- [California Housing Dataset](https://scikit-learn.org/stable/datasets/real_world.html#california-housing-dataset) — Tasks 1-3: predicting median house value
+- [Breast Cancer Wisconsin Dataset](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html) — Tasks 4-6: binary classification (Malignant vs Benign)
