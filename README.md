@@ -1,10 +1,30 @@
-# AI/ML Internship — Maincrafts Technology
+<div align="center">
 
-**Intern:** Ravindra Das
-**Domain:** Artificial Intelligence & Machine Learning
-**Company:** Maincrafts Technology
+# 🤖 AI/ML Internship — Maincrafts Technology
+
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![Keras](https://img.shields.io/badge/Keras-Deep%20Learning-D00000?style=for-the-badge&logo=keras&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-Backend-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+![Tasks](https://img.shields.io/badge/Tasks%20Completed-6%2F6-2ea44f?style=for-the-badge)
+
+**👤 Intern:** Ravindra Das &nbsp;|&nbsp; **🎯 Domain:** Artificial Intelligence & Machine Learning &nbsp;|&nbsp; **🏢 Company:** Maincrafts Technology
+
+</div>
 
 This repository contains my completed tasks for the AI/ML Internship program, covering regression on the **California Housing dataset** (Tasks 1-3) and classification / deep learning on the **Breast Cancer dataset** (Tasks 4-6).
+
+## 🗺️ Overview
+
+| # | Task | Dataset | Key Models / Topics | Folder |
+|---|---|---|---|---|
+| 1 | Linear Regression | California Housing | Linear Regression, MAE / RMSE / R² | [task1](./task1) |
+| 2 | Feature Engineering & Comparison | California Housing | Ridge, Decision Tree, Scaling | [task2](./task2) |
+| 3 | Validation & Tuning | California Housing | Cross-validation, GridSearchCV | [task3](./task3) |
+| 4 | Classification & Imbalance | Breast Cancer | Logistic Regression, ROC-AUC | [task4](./task4) |
+| 5 | Ensemble Learning | Breast Cancer | Random Forest, Gradient Boosting | [task5](./task5) |
+| 6 | Deep Learning | Breast Cancer | Neural Network (Keras), Backpropagation | [task6](./task6) |
 
 ---
 
@@ -133,11 +153,12 @@ ROC-AUC (baseline Logistic Regression): **0.995**
 | Gradient Boosting | 0.9561 | 0.9467 | 0.9861 | 0.9660 | 0.9907 | 0.971 |
 | Random Forest (tuned) | 0.9561 | 0.9589 | 0.9722 | 0.9655 | 0.9934 | 0.968 |
 
-Key insight: on this small, nearly linearly separable dataset, the simple baseline beat the ensembles — ensembles are benchmarked, not assumed better.
+> [!TIP]
+> **Key insight:** on this small, nearly linearly separable dataset, the simple baseline beat the ensembles — ensembles are benchmarked, not assumed better.
 
 **Files:**
-- [`AI_ML_Task5_Ensemble_Learning.ipynb`](./Task5/AI_ML_Task5_Ensemble_Learning.ipynb) — full notebook
-- [`Task5_ML_Report.pdf`](./Task5/Task5_ML_Report.pdf) — 3-page report
+- [`AI_ML_Task5_Ensemble_Learning.ipynb`](./task5/AI_ML_Task5_Ensemble_Learning.ipynb) — full notebook
+- [`Task5_ML_Report.pdf`](./task5/Task5_ML_Report.pdf) — 3-page report
 - `final_logistic_model.joblib`, `best_rf_model.joblib`, `scaler.joblib` — saved models
 
 ---
@@ -151,7 +172,9 @@ Key insight: on this small, nearly linearly separable dataset, the simple baseli
 - Compiled with the Adam optimizer and binary cross-entropy loss; trained for 50 epochs (batch size 16, 20% validation split).
 - Evaluated on the held-out test set and plotted training vs validation accuracy and loss curves.
 - Compared the neural network against Logistic Regression (Task 4) and Random Forest (Task 5) on the same train/test split.
-- Note: TensorFlow was blocked by Windows Application Control on my laptop, so Keras 3 was run with the **PyTorch backend**. The Keras code is identical.
+
+> [!NOTE]
+> TensorFlow was blocked by Windows Application Control on my laptop, so Keras 3 was run with the **PyTorch backend**. The Keras code is identical.
 
 **Model Comparison:**
 
@@ -161,7 +184,18 @@ Key insight: on this small, nearly linearly separable dataset, the simple baseli
 | Random Forest | XX |
 | Neural Network (ANN) | XX |
 
-Key insight: *(write 1 line from your results, e.g. on a small tabular dataset the neural network performs about the same as classical models, so deep learning gives no big advantage here.)*
+> [!TIP]
+> **Key insight:** *(write 1 line from your results, e.g. on a small tabular dataset the neural network performs about the same as classical models, so deep learning gives no big advantage here.)*
+
+**Training Results:**
+
+<table>
+<tr>
+<td align="center"><b>Accuracy</b><br><img src="./task6/accuracy_graph.png" width="320"></td>
+<td align="center"><b>Loss</b><br><img src="./task6/loss_graph.png" width="320"></td>
+<td align="center"><b>Model Comparison</b><br><img src="./task6/comparison.png" width="320"></td>
+</tr>
+</table>
 
 **Files:**
 - [`Task6.ipynb`](./task6/Task6.ipynb) — full notebook with training output
