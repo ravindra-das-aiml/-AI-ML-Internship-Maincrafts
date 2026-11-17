@@ -176,16 +176,18 @@ ROC-AUC (baseline Logistic Regression): **0.995**
 > [!NOTE]
 > TensorFlow was blocked by Windows Application Control on my laptop, so Keras 3 was run with the **PyTorch backend**. The Keras code is identical.
 
+**Test Loss:** 0.0736 · **Test Accuracy:** 0.9737
+
 **Model Comparison:**
 
 | Model | Accuracy |
 |---|---|
-| Logistic Regression | XX |
-| Random Forest | XX |
-| Neural Network (ANN) | XX |
+| Logistic Regression | 0.9825 |
+| Random Forest | 0.9561 |
+| Neural Network (ANN) | 0.9737 |
 
 > [!TIP]
-> **Key insight:** *(write 1 line from your results, e.g. on a small tabular dataset the neural network performs about the same as classical models, so deep learning gives no big advantage here.)*
+> **Key insight:** the neural network reached 97.37% test accuracy, beating Random Forest (95.61%) but slightly behind Logistic Regression (98.25%). On a small tabular dataset, deep learning gives no clear advantage over simple models.
 
 **Training Results:**
 
